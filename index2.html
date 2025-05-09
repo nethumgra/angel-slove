@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angel's Love | Party Wear</title>
+  <meta name="description" content="Discover our exclusive collection of stunning party wear designed to make you shine. Quality party wear for all your special occasions.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            darkGold: '#B8860B'
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-[Poppins] bg-white text-gray-800">
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full bg-black text-white z-50 transition-all duration-300 py-4">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <div class="text-3xl font-bold text-white">
+          <span class="text-gold">Angel's</span> Love
+        </div>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li>
+            <a href="#home" class="hover-underline relative text-white hover:text-gold transition duration-300">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#arrivals" class="hover-underline relative text-white hover:text-gold transition duration-300">
+              New Arrivals
+            </a>
+          </li>
+          <li>
+            <a href="#featured" class="hover-underline relative text-white hover:text-gold transition duration-300">
+              Party Wear
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" class="hover-underline relative text-white hover:text-gold transition duration-300">
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="hover-underline relative text-white hover:text-gold transition duration-300">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Shopping Cart & Mobile Menu Button -->
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-white hover:text-gold transition-colors duration-300">
+          <i class="fas fa-shopping-bag text-xl"></i>
+        </a>
+        <button 
+          id="mobile-menu-btn" 
+          class="md:hidden text-white hover:text-gold focus:outline-none"
+          aria-label="Toggle mobile menu"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="bg-black md:hidden hidden">
+      <div class="container mx-auto px-4 py-4">
+        <ul class="space-y-4">
+          <li>
+            <a href="#home" class="block text-white hover:text-gold py-2">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#arrivals" class="block text-white hover:text-gold py-2">
+              New Arrivals
+            </a>
+          </li>
+          <li>
+            <a href="#featured" class="block text-white hover:text-gold py-2">
+              Party Wear
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" class="block text-white hover:text-gold py-2">
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="block text-white hover:text-gold py-2">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 h-128 flex items-center justify-center overflow-hidden">
+      <!-- Hero background image -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1550928431-ee0ec6db30d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&h=1000"
+          alt="Elegant party wear collection" 
+          class="w-full h-full object-cover"
+        />
+        <div class="overlay absolute inset-0"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 z-10 text-center">
+        <h1 class="text-4xl md:text-6xl font-semibold mb-6 text-white text-shadow">
+          Elegance for Every Occasion
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-white text-shadow max-w-3xl mx-auto">
+          Discover our exclusive collection of stunning party wear designed to make you shine
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a 
+            href="#arrivals" 
+            class="bg-gold hover:bg-darkGold text-black px-8 py-3 rounded-full font-semibold transition duration-300 inline-block"
+          >
+            Shop Collection
+          </a>
+          <a 
+            href="#gallery" 
+            class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-full font-semibold transition duration-300 inline-block"
+          >
+            View Gallery
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Banner -->
+    <section class="py-12 bg-black text-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+          <div class="md:w-1/4">
+            <div class="flex justify-center md:justify-start">
+              <i class="fas fa-shipping-fast text-gold text-4xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mt-3">Free Shipping</h3>
+            <p class="text-sm text-gray-300">On orders over Rs. 5,000</p>
+          </div>
+          
+          <div class="md:w-1/4">
+            <div class="flex justify-center md:justify-start">
+              <i class="fas fa-gem text-gold text-4xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mt-3">Premium Quality</h3>
+            <p class="text-sm text-gray-300">Handcrafted with care</p>
+          </div>
+          
+          <div class="md:w-1/4">
+            <div class="flex justify-center md:justify-start">
+              <i class="fas fa-sync-alt text-gold text-4xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mt-3">Easy Returns</h3>
+            <p class="text-sm text-gray-300">14-day return policy</p>
+          </div>
+          
+          <div class="md:w-1/4">
+            <div class="flex justify-center md:justify-start">
+              <i class="fas fa-headset text-gold text-4xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mt-3">24/7 Support</h3>
+            <p class="text-sm text-gray-300">Always here to help</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section id="arrivals" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-3">New Arrivals</h2>
+          <div class="w-20 h-1 bg-gold mx-auto"></div>
+          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Discover our latest collection of stunning party wear designed to make your special occasions memorable
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Product 1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 card-zoom">
+            <div class="overflow-hidden">
+              <img 
+                src="m2.png" 
+                alt="Elegant Red Gown" 
+                class="w-full h-80 object-cover transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Elegant Red Gown</h3>
+              <div class="flex justify-between items-center">
+                <p class="text-gray-700 font-medium">Rs. 5,900</p>
+                <div class="flex">
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star-half-alt"></i></span>
+                </div>
+              </div>
+              <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                <div class="flex space-x-2">
+                  <span class="w-5 h-5 rounded-full bg-red-600 inline-block cursor-pointer border border-gray-300"></span>
+                  <span class="w-5 h-5 rounded-full bg-black inline-block cursor-pointer border border-gray-300"></span>
+                  <span class="w-5 h-5 rounded-full bg-blue-600 inline-block cursor-pointer border border-gray-300"></span>
+                </div>
+                <button class="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-full text-sm transition duration-300">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 card-zoom">
+            <div class="overflow-hidden">
+              <img 
+                src="m3.jpg" 
+                alt="Golden Glamour Gown" 
+                class="w-full h-80 object-cover transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Golden Glamour Gown</h3>
+              <div class="flex justify-between items-center">
+                <p class="text-gray-700 font-medium">Rs. 8,200</p>
+                <div class="flex">
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                </div>
+              </div>
+              <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                <div class="flex space-x-2">
+                  <span class="w-5 h-5 rounded-full bg-yellow-600 inline-block cursor-pointer border border-gray-300"></span>
+                  <span class="w-5 h-5 rounded-full bg-yellow-300 inline-block cursor-pointer border border-gray-300"></span>
+                </div>
+                <button class="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-full text-sm transition duration-300">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 card-zoom">
+            <div class="overflow-hidden">
+              <img 
+                src="m4.jpg" 
+                alt="Black Chic Dress" 
+                class="w-full h-80 object-cover transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Black Chic Dress</h3>
+              <div class="flex justify-between items-center">
+                <p class="text-gray-700 font-medium">Rs. 6,500</p>
+                <div class="flex">
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gold"><i class="fas fa-star"></i></span>
+                  <span class="text-gray-300"><i class="fas fa-star"></i></span>
+                </div>
+              </div>
+              <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                <div class="flex space-x-2">
+                  <span class="w-5 h-5 rounded-full bg-black inline-block cursor-pointer border border-gray-300"></span>
+                </div>
+                <button class="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-full text-sm transition duration-300">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block border-2 border-black hover:bg-black hover:text-white px-8 py-3 rounded-full font-semibold transition duration-300">
+            View All Collection
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section id="featured" class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-3">Exclusive Party Collection</h2>
+          <div class="w-20 h-1 bg-gold mx-auto"></div>
+          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Designed for those special moments where you deserve to shine
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- Evening Glamour -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img 
+              src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              alt="Elegant Evening Collection" 
+              class="w-full h-96 object-cover transform group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-2xl font-semibold mb-2">Evening Glamour</h3>
+              <p class="mb-4">Perfect for formal galas and evening celebrations</p>
+              <a href="#" class="inline-block bg-white text-black hover:bg-gold hover:text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300">
+                Explore Collection
+              </a>
+            </div>
+          </div>
+          
+          <!-- Cocktail Chic -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img 
+              src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              alt="Cocktail Party Collection" 
+              class="w-full h-96 object-cover transform group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-2xl font-semibold mb-2">Cocktail Chic</h3>
+              <p class="mb-4">Stylish outfits for sophisticated cocktail parties</p>
+              <a href="#" class="inline-block bg-white text-black hover:bg-gold hover:text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300">
+                Explore Collection
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Festival Vibes -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img 
+              src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000" 
+              alt="Festival Collection" 
+              class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Festival Vibes</h3>
+              <p class="mb-3">Colorful and vibrant outfits</p>
+              <a href="#" class="text-white hover:text-gold transition duration-300 text-sm font-medium inline-flex items-center">
+                Shop Now <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Wedding Ready -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img 
+              src="https://pixabay.com/get/g69aca926e302a67061cf4f868b4f3321e981af5a42cbb83a070155e3743ae7ddef3e4cf83d9936539498538d96cf8b129de517e044af68f40de6bae48c46fb10_1280.jpg" 
+              alt="Wedding Guest Collection" 
+              class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Wedding Ready</h3>
+              <p class="mb-3">Perfect for wedding celebrations</p>
+              <a href="#" class="text-white hover:text-gold transition duration-300 text-sm font-medium inline-flex items-center">
+                Shop Now <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Corporate Elegance -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img 
+              src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000" 
+              alt="Corporate Party Collection" 
+              class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Corporate Elegance</h3>
+              <p class="mb-3">Sophisticated office party attire</p>
+              <a href="#" class="text-white hover:text-gold transition duration-300 text-sm font-medium inline-flex items-center">
+                Shop Now <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-3">Customer Stories</h2>
+          <div class="w-20 h-1 bg-gold mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-md relative">
+            <div class="text-gold text-4xl absolute -top-5 left-6">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="mt-4 mb-6 text-gray-600 italic">
+              "I received so many compliments on my red gown! The quality is amazing and it fit perfectly. Will definitely shop here again for my next event."
+            </p>
+            <div class="flex items-center">
+              <img 
+                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&h=120" 
+                alt="Malini Silva" 
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Malini Silva</h4>
+                <div class="flex text-gold">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-md relative">
+            <div class="text-gold text-4xl absolute -top-5 left-6">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="mt-4 mb-6 text-gray-600 italic">
+              "The shipping was fast and the evening gown was even more beautiful in person. Perfect for my daughter's wedding. Excellent customer service too!"
+            </p>
+            <div class="flex items-center">
+              <img 
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&h=120" 
+                alt="Priya Jayawardena" 
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Priya Jayawardena</h4>
+                <div class="flex text-gold">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-md relative">
+            <div class="text-gold text-4xl absolute -top-5 left-6">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="mt-4 mb-6 text-gray-600 italic">
+              "I've purchased three dresses from Chic Wear for different occasions. Every single one has been high quality and fits as expected. My go-to shop for party wear!"
+            </p>
+            <div class="flex items-center">
+              <img 
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&h=120" 
+                alt="Amaya Fernando" 
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Amaya Fernando</h4>
+                <div class="flex text-gold">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-3">Our Gallery</h2>
+          <div class="w-20 h-1 bg-gold mx-auto"></div>
+          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Browse through our stunning collection and customer showcase
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="galleryGrid">
+          <!-- Gallery Image 1 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
+              alt="Gallery image 1" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 2 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://pixabay.com/get/g08c2cd8cb2f53ef9f9c93103de5aaa6ca0496f250bb79de5f7342238a78d7ca40498e1c86e725d8ff17aada07b68184da1373be606824e8accec53742fe625aa_1280.jpg" 
+              alt="Gallery image 2" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 3 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
+              alt="Gallery image 3" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 4 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://pixabay.com/get/ga7f96c7b9cb238c9b468908b5d357a0b86529a03a5d6293724f8dfd8b3ddc757cbf0c3d34982f12e5184ef34fee5b5cf8c4e673e14c56e4bb201f10d1b1b4c6a_1280.jpg" 
+              alt="Gallery image 4" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 5 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://images.unsplash.com/photo-1578632292335-df3abbb0d586?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
+              alt="Gallery image 5" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 6 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://images.unsplash.com/photo-1589810635657-232948472d98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
+              alt="Gallery image 6" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 7 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
+              alt="Gallery image 7" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 8 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg cursor-pointer">
+            <img 
+              src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
+              alt="Gallery image 8" 
+              class="w-full h-72 object-cover transition duration-500 hover:scale-110"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition duration-300 flex items-center justify-center">
+              <div class="text-white">
+                <i class="fas fa-search-plus text-2xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full font-semibold transition duration-300">
+            View Full Gallery
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-3">Get In Touch</h2>
+          <div class="w-20 h-1 bg-gold mx-auto"></div>
+          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Have questions about our products or services? We're here to help!
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+              <div class="flex items-start mb-4">
+                <div class="text-gold mr-4 mt-1">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Our Store</p>
+                  <p class="text-gray-600">123 Fashion Avenue, Colombo 04, Sri Lanka</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-4">
+                <div class="text-gold mr-4 mt-1">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Phone</p>
+                  <p class="text-gray-600">+94 11 234 5678</p>
+                  <p class="text-gray-600">+94 76 123 4567</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-4">
+                <div class="text-gold mr-4 mt-1">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Email</p>
+                  <p class="text-gray-600">info@chicwear.com</p>
+                  <p class="text-gray-600">support@chicwear.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="text-gold mr-4 mt-1">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Working Hours</p>
+                  <p class="text-gray-600">Monday - Saturday: 10:00 AM - 8:00 PM</p>
+                  <p class="text-gray-600">Sunday: 11:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-gold transition duration-300">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-gold transition duration-300">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-gold transition duration-300">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-gold transition duration-300">
+                  <i class="fab fa-pinterest-p"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-6">Send Us a Message</h3>
+            
+            <div id="success-message" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4 hidden">
+              <strong class="font-bold">Thank you!</strong>
+              <span class="block sm:inline"> Your message has been sent successfully. We'll get back to you soon.</span>
+            </div>
+            
+            <form id="contactForm">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2">Your Name *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold" 
+                  required
+                />
+                <p id="name-error" class="text-red-500 text-sm mt-1 hidden"></p>
+              </div>
+              
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2">Email Address *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold" 
+                  required
+                />
+                <p id="email-error" class="text-red-500 text-sm mt-1 hidden"></p>
+              </div>
+              
+              <div class="mb-4">
+                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold"
+                />
+              </div>
+              
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 mb-2">Your Message *</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="4" 
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold" 
+                  required
+                ></textarea>
+                <p id="message-error" class="text-red-500 text-sm mt-1 hidden"></p>
+              </div>
+              
+              <button 
+                type="submit" 
+                class="w-full bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-black text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-semibold mb-4">Join Our Newsletter</h2>
+          <p class="mb-6 text-gray-300">
+            Subscribe to receive updates about new collections, special offers and styling tips
+          </p>
+          
+          <div id="newsletter-success" class="bg-gold text-black px-6 py-4 rounded-lg mb-4 hidden">
+            <p class="font-medium">Thank you for subscribing to our newsletter!</p>
+          </div>
+          
+          <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4">
+            <div class="flex-grow">
+              <input 
+                type="email" 
+                id="newsletter-email"
+                placeholder="Your email address" 
+                class="w-full px-4 py-3 rounded-lg focus:outline-none text-gray-800"
+              />
+              <p id="newsletter-error" class="text-red-400 text-sm mt-1 text-left hidden"></p>
+            </div>
+            <button 
+              type="submit" 
+              class="bg-gold hover:bg-darkGold text-black px-6 py-3 rounded-lg font-semibold transition duration-300"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">
+            <span class="text-gold">Angel's</span> Love
+          </h3>
+          <p class="text-gray-400 mb-6">
+            Elegance and style for your most memorable moments. Quality party wear for all your special occasions.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-gold transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gold transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gold transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gold transition duration-300">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Shop</h4>
+          <ul class="space-y-2">
+            <li><a href="#arrivals" class="text-gray-400 hover:text-gold transition duration-300">New Arrivals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Evening Gowns</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Cocktail Dresses</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Wedding Guest</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Festival Wear</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Help</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Customer Service</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">My Account</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Find a Store</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Size Guide</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Shipping & Returns</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">FAQs</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">About</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Our Story</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Sustainability</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Press</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+        <p>&copy; <span id="year"></span> Chic Wear Boutique. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close cursor-pointer absolute top-6 right-6 text-white text-4xl z-50">&times;</span>
+    <div class="lightbox-content max-w-4xl mx-auto p-4">
+      <img id="lightbox-img" class="max-w-full max-h-[80vh] mx-auto" src="" alt="">
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
